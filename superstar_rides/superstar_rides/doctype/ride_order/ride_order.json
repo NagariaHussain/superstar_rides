@@ -40,6 +40,7 @@
    "default": "Pending",
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
    "options": "Pending\nAccepted\nRejected"
   },
@@ -76,7 +77,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-18 17:16:29.588330",
+ "modified": "2022-11-19 14:18:35.043667",
  "modified_by": "Administrator",
  "module": "Superstar Rides",
  "name": "Ride Order",
@@ -98,7 +99,16 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
+ "states": [
+  {
+   "color": "Green",
+   "title": "Accepted"
+  },
+  {
+   "color": "Red",
+   "title": "Rejected"
+  }
+ ],
  "track_changes": 1,
  "track_seen": 1
 }

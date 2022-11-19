@@ -17,7 +17,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2022-11-18 17:07:04.633113",
+ "modified": "2022-11-19 15:50:40.448607",
  "modified_by": "Administrator",
  "module": "Superstar Rides",
  "name": "vehicle-order",
@@ -27,6 +27,7 @@
  "show_attachments": 0,
  "show_list": 0,
  "show_sidebar": 0,
+ "success_url": "/submit-success",
  "title": "Vehicle Order",
  "web_form_fields": [
   {
