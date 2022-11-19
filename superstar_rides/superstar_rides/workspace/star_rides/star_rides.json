@@ -1,0 +1,40 @@
+{
+ "charts": [
+  {
+   "chart_name": "Orders Per Month",
+   "label": "Ride Orders Per Month"
+  }
+ ],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Star Rides</span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pending Orders\",\"col\":3}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Ride Orders Per Month\",\"col\":12}}]",
+ "creation": "2022-11-19 16:19:33.279862",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "assign",
+ "idx": 0,
+ "label": "Star Rides",
+ "links": [],
+ "modified": "2022-11-19 16:22:52.484366",
+ "modified_by": "Administrator",
+ "module": "Superstar Rides",
+ "name": "Star Rides",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "format": "{} Pending",
+   "label": "Pending Orders",
+   "link_to": "Ride Order",
+   "stats_filter": "{\"status\":[\"=\",\"Pending\"]}",
+   "type": "DocType"
+  }
+ ],
+ "title": "Star Rides"
+}
