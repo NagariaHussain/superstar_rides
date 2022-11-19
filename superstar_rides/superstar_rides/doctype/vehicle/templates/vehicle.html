@@ -1,0 +1,13 @@
+{% extends "templates/web.html" %}
+ 
+{% block page_content %}
+<h1 class="text-center">{{ title }}</h1>
+ 
+{% set image_alt = "{} {} Image".format(make, model) %}
+<img class="rounded mx-auto d-block" src="{{ image }}" alt="{{ image_alt }}" title="{{ image_alt }}" >
+ 
+<div class="text-center mt-5">
+   <!-- TODO: Point to our web form -->
+   <a class="btn btn-primary" href="/vehicle-order/new?vehicle={{name}}">Book Now</a>
+</div>
+{% endblock %}
