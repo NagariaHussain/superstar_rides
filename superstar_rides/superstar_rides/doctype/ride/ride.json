@@ -1,0 +1,120 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-11-19 14:46:31.840945",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ride_order",
+  "customer",
+  "vehicle",
+  "driver",
+  "pickup_location",
+  "pickup_at",
+  "amended_from",
+  "cost_breakup",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "ride_order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Ride Order",
+   "options": "Ride Order",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "ride_order.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "User",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "ride_order.vehicle",
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Vehicle",
+   "options": "Vehicle",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Driver",
+   "options": "Driver",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "ride_order.pickup_address",
+   "fieldname": "pickup_location",
+   "fieldtype": "Small Text",
+   "label": "Pickup Location",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "ride_order.pickup_at",
+   "fieldname": "pickup_at",
+   "fieldtype": "Datetime",
+   "label": "Pickup At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Ride",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost_breakup",
+   "fieldtype": "Table",
+   "label": "Cost Breakup",
+   "options": "Ride Cost Breakup"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-11-19 15:37:58.079477",
+ "modified_by": "Administrator",
+ "module": "Superstar Rides",
+ "name": "Ride",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
