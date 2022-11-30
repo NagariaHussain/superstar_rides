@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "autoincrement",
+ "autoname": "format:Drv-{#####}",
  "creation": "2022-11-18 15:38:18.237722",
  "default_view": "List",
  "doctype": "DocType",
@@ -57,12 +57,17 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2022-11-18 15:41:48.563664",
+ "links": [
+  {
+   "link_doctype": "Supplier",
+   "link_fieldname": "driver"
+  }
+ ],
+ "modified": "2022-11-19 16:59:44.769817",
  "modified_by": "Administrator",
  "module": "Superstar Rides",
  "name": "Driver",
- "naming_rule": "Autoincrement",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
