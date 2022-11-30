@@ -29,7 +29,10 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+	"Sales Order" : "public/js/custom_sales_order.js"
+}
+
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -94,21 +97,24 @@ app_license = "MIT"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+fixtures = ["Custom Field"]
+
+override_doctype_class = {
+	"Purchase Receipt": "superstar_rides.custom_folder.purchase_receipt.CustomPurchaseReceipt"
+}
 
 # Document Events
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"User": {
+		"on_update": "superstar_rides.custom_folder.server_scripts.on_update_events"
+	},
+	"Sales Order": {
+		"on_submit": "superstar_rides.custom_folder.custom_sales_order.on_submit_events"
+	}
+}
 
 # Scheduled Tasks
 # ---------------

@@ -57,8 +57,13 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2022-11-19 14:07:01.267485",
+ "links": [
+  {
+   "link_doctype": "Supplier",
+   "link_fieldname": "driver"
+  }
+ ],
+ "modified": "2022-11-19 16:59:44.769817",
  "modified_by": "Administrator",
  "module": "Superstar Rides",
  "name": "Driver",

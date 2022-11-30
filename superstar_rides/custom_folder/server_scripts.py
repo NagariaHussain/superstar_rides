@@ -8,7 +8,17 @@ def create_ride(ride_order):
 	return doc
 
 
+def on_update_events(doc, method=None):
+	create_customer(doc)
 
+def create_customer(doc):
+	frappe.get_doc({
+		"doctype": "Customer",
+		"customer_name": doc.full_name,
+		"customer_group": "Commercial",
+		"territory": "All Territories",
+		"customer_type": "Individual"
+	}).insert(ignore_permissions=True)
 
 
 
@@ -38,9 +48,9 @@ def create_sales_invoice(source_name, target_doc=None):
 		source_name,
 		{
 			"Ride": {"doctype": "Sales Invoice"},
-			"Ride Details": {
+			"Ride Cost Breakup": {
 				"doctype": "Sales Invoice Item",
-				"field_map": {"parent": "ride", "name": "ride_details"},
+				# "field_map": {"parent": "ride", "name": "ride_details"},
 				"postprocess": update_item_quantity
 			},
 		},
